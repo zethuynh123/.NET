@@ -63,6 +63,8 @@ namespace GUI_SMS
             tf = tf1 = true;
             lock_unlock(tf);
             lock_unlock1(tf1);
+            txtManha.Text = txtLoainha.Text = txtSoluong.Text = txtDiachi.Text =  txtDientich.Text = txtGia.Text = "";
+
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -75,6 +77,7 @@ namespace GUI_SMS
                     tf = !tf;
                     lock_unlock(tf);
                     dgvNha.DataSource = busNha.getNha();
+                    txtManha.Text = txtLoainha.Text = txtSoluong.Text = txtDiachi.Text =  txtDientich.Text = txtGia.Text = "";
                 }
                 else
                 {
@@ -97,7 +100,7 @@ namespace GUI_SMS
                 txtManha.Text = txtLoainha.Text = txtDiachi.Text = txtDientich.Text = txtGia.Text = txtSoluong.Text= "";
                 txtLoainha.Focus();
             }
-            else MessageBox.Show("Updating or Deleting!\nClick Reset to do another thing.", "Information");
+            else MessageBox.Show("Đang thực hiện một thao tác khác!\nBấm Làm mới nếu muốn đổi thao tác.", "Thông báo");
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -125,6 +128,7 @@ namespace GUI_SMS
                     tf1 = !tf1;
                     lock_unlock1(tf1);
                     dgvNha.DataSource = busNha.getNha();
+                    txtManha.Text = txtLoainha.Text = txtSoluong.Text = txtDiachi.Text =  txtDientich.Text = txtGia.Text = "";
                 }
                 else
                 {

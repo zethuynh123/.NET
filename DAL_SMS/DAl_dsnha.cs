@@ -22,7 +22,7 @@ namespace DAL_SMS
         }
         public bool ThemNha(string manha, string loainha,string soluong, string diachi, string dientich, string gia)
         {
-            string str = string.Format("insert  into Nhathue (Manha,Loainha,Soluong,Diachi,Dientich,Gia) values('{0}','{1}','{2}','{3}','{4}','{5}')", manha,loainha,soluong,diachi,dientich,gia);
+            string str = string.Format("insert  into Nhathue (Manha,Loainha,Soluong,Diachi,Dientich,Gia) values('{0}',N'{1}','{2}',N'{3}','{4}','{5}')", manha,loainha,soluong,diachi,dientich,gia);
             try
             {
                 con.Open();
